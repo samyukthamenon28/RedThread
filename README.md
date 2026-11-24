@@ -59,20 +59,6 @@ USE_STUBS=1 python -m uvicorn backend.main:app --port 8000 --reload
 
 There is **no "safe" tier**. "No match" is not a statement about product safety.
 
-## Sponsor Prize Integrations
-
-### 🎙️ ElevenLabs — Voice Narration Briefing
-Redthread generates an executive audio briefing of every exposure report using **ElevenLabs Text-to-Speech**.
-- **Endpoint**: `POST /api/investigations/{id}/narrate`
-- **Frontend**: One-click "🎙️ Voice Briefing" button in the Exposure Report toolbar with real-time playback.
-- **Graceful fallback**: When offline or if an API key is not configured, generates a structured briefing script preview.
-
-### ☁️ AWS S3 — Investigation Evidence Archival
-Completed investigation runs (events stream, knowledge graph, exposure report, verbatim quotes, and page captures) are packaged and securely archived into **Amazon S3**.
-- **Endpoint**: `POST /api/investigations/{id}/archive`
-- **Frontend**: "☁️ Archive to AWS" button displays archival manifests and S3 object keys.
-- **Graceful fallback**: Generates a reproducible offline archival manifest if AWS credentials are not set.
-
 ## Environment Variables
 
 | Variable | Description | Default |
@@ -104,9 +90,8 @@ Completed investigation runs (events stream, knowledge graph, exposure report, v
 | GET | `/api/investigations/{id}/export.json` | Full export |
 | GET | `/api/replays` | List recorded runs |
 | GET | `/api/health` | Health check |
-| GET | `/api/sponsors/status` | Sponsor integrations status (ElevenLabs & AWS) |
-| POST | `/api/investigations/{id}/narrate` | ElevenLabs report audio briefing |
-| POST | `/api/investigations/{id}/archive` | AWS S3 investigation artifact archival |
+| POST | `/api/investigations/{id}/narrate` | Report audio briefing (ElevenLabs) |
+| POST | `/api/investigations/{id}/archive` | Investigation artifact archival (AWS S3) |
 
 ## Make Targets
 
