@@ -1,0 +1,16 @@
+{
+  "_note": "Fallback PLACEHOLDER values. When fixtures/cpsc_sample.json exists, build.py overrides brand/models/GTINs with the real recall (CPSC 26419). scope_mode: the notice limits scope by date code (May 25 to Jan 26), so 'range'.",
+  "source": "PLACEHOLDER",
+  "shop_name": "Marlowe & Finch Home Store",
+  "brand": "PLACEHOLDER-BRAND",
+  "product_name": "Freestanding Professional Gas Range",
+  "models": [
+    "MODEL-AAA"
+  ],
+  "gtins": [
+    "036000291452"
+  ],
+  "manufacture_date_in_range": "August 2025",
+  "manufacture_date_outside": "March 2024",
+  "scope_mode": "range"
+}
